@@ -37,8 +37,8 @@ class DetailScreen extends Component {
         const localAsteroidData = this.state.asteroidData;
         return (
             <View style={styles.screen}>
-                 {this.state.isLoading?  <Spinner color='blue' /> : null}
-                 {(this.state.isDataFound && !this.state.isLoading) ? 
+                 {this.state.isLoading?  <Spinner color='blue' /> : 
+                 (this.state.isDataFound && !this.state.isLoading) ? 
                  <Card style={styles.card}>
                  <CardItem header bordered>
                      <H3>Asteroid Details</H3>

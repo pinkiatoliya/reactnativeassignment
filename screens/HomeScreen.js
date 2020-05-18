@@ -10,7 +10,12 @@ class HomeScreen extends Component {
 
         }
     }
-
+    
+    // componentWillMount = ()=>{
+    //     this.setState({
+    //         asteroidID: null
+    //     });
+    // }
     getRandomIndex = (max)=>{
         return Math.floor(Math.random() * Math.floor(max));
     }
@@ -56,7 +61,8 @@ class HomeScreen extends Component {
                         <Label>Enter Asteroid ID</Label>
                         <Input value={asteroidID}
                         onChangeText = {this.textChangeHandler}
-                        maxLength={7}/>
+                        maxLength={7}
+                        autoCorrect={false} />
                     </Item>
                     </Form>
                     <View style={{flexDirection: "row", justifyContent: 'flex-end', marginVertical: 10}}>
