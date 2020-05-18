@@ -17,7 +17,7 @@ class DetailScreen extends Component {
     componentDidMount = () => {
         this.setState({ isLoading: true });
         fetch('https://api.nasa.gov/neo/rest/v1/neo/' + this.props.route.params + '?api_key=' + API_KEY).then(res => res.json()).then(res => {
-            console.log(res);
+            // console.log(res);
             this.setState({
                 ...this.state,
                 asteroidData: res,
@@ -25,7 +25,7 @@ class DetailScreen extends Component {
                 isLoading: false
             })
         }).catch(error => {
-            console.log(error);
+            // console.log(error);
             this.setState({
                 asteroidData: {},
                 isDataFound: false,

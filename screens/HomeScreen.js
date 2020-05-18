@@ -25,7 +25,7 @@ class HomeScreen extends Component {
       fetch('https://api.nasa.gov/neo/rest/v1/neo/browse?api_key='+ API_KEY).then(response=> response.json()).then(response=>{
               let dataArray = response.near_earth_objects;
               const randomIndex = this.getRandomIndex(response.page.size);
-              console.log(randomIndex, response.page.size);
+            //   console.log(randomIndex, response.page.size);
               const asteroidID = dataArray[randomIndex].id;
               this.commonPageCall(asteroidID);
       }).catch(error=>{
@@ -62,7 +62,7 @@ class HomeScreen extends Component {
                         <Input value={asteroidID}
                         onChangeText = {this.textChangeHandler}
                         maxLength={7}
-                        autoCorrect={false} />
+                        autoCorrect={false}/>
                     </Item>
                     </Form>
                     <View style={{flexDirection: "row", justifyContent: 'flex-end', marginVertical: 10}}>
